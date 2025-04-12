@@ -8,11 +8,11 @@ const categories = ['Food', 'Utilities', 'Shopping', 'Transport', 'Finance', 'Ot
 
 export default function ExpenseForm({ onSubmit }) {
   const [formData, setFormData] = useState({
-    expense: '',  // Changed from 'Expenses' to 'expense' for consistency
+    expense: '',  
     description: '',
     amount: '',
-    category: '', // Initialize with first category
-    date: null // Initialize as null for DatePicker
+    category: '', 
+    date: null 
   });
 
   const handleChange = (e) => {
@@ -38,7 +38,7 @@ export default function ExpenseForm({ onSubmit }) {
       description: formData.description,
       amount: parseFloat(formData.amount),
       category: formData.category,
-      date: format(formData.date, 'MM/dd/yyyy'), // Properly format the date
+      date: format(formData.date, 'MM/dd/yyyy'), 
     };
 
     onSubmit(newExpense);
