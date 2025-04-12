@@ -1,0 +1,232 @@
+/* Base Styles */
+.app-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.app-header {
+  background: #a058f3;
+  color: #070606;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.app-header p {
+  margin: 8px 0 0;
+  opacity: 0.9;
+}
+
+.two-column-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+/* Form Card */
+.expense-form-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border: 1px solid #eaeaea;
+  margin-bottom: 20px;
+}
+
+.expense-form-card h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.submit-btn {
+  width: 100%;
+  background: #9554e9;
+  color: #070606;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Search and List */
+.search-container {
+  margin-bottom: 15px;
+}
+
+.search-input-wrapper {
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  color: #666;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 15px 10px 35px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.list-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border: 1px solid #eaeaea;
+}
+
+.expense-table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+th {
+  background: #000;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+
+.delete-btn {
+  background: #a464ee;
+  color: #060507;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Empty State */
+.empty-message {
+  text-align: center;
+  padding: 30px;
+  color: #666;
+}
+
+.empty-message svg {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+  color: #ccc;
+}
+
+/* Date Picker Styles */
+.date-picker-wrapper {
+  position: relative;
+  width: 100%; 
+}
+
+.date-picker-wrapper .react-datepicker-wrapper {
+  width: 100%; 
+}
+
+.calendar-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  color: #666;
+  pointer-events: none; 
+}
+
+
+.react-datepicker__input-container input {
+  padding-right: 35px !important; 
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Responsive adjustments for smaller devices */
+@media (max-width: 480px) {
+  .date-picker-wrapper {
+    width: 100%;
+  }
+  
+  .react-datepicker__input-container input {
+    padding: 10px 35px 10px 12px !important; 
+    font-size: 0.9rem; 
+  }
+  
+  .calendar-icon {
+    right: 8px; 
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* Responsive Adjustments */
+@media (min-width: 768px) {
+  .two-column-layout {
+    grid-template-columns: 350px 1fr;
+  }
+  
+  .form-card-container {
+    position: sticky;
+    top: 20px;
+  }
+  
+  .app-header h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .app-header {
+    padding: 25px;
+  }
+  
+  .app-header h1 {
+    font-size: 2.2rem;
+  }
+}
